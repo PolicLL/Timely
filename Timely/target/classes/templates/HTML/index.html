@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html xmlns:th = "http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel = "stylesheet" href = "../CSS/style.css"/>
+    
+
+<body>
+
+    <header>
+        <h2>Timely</h2>
+    </header>
+
+
+    <main>
+    
+        
+<!-- th:onclick="|window.location.href='/start'|" -->>
+		<div id = "buttons">
+			<button  type="button" th:onclick="|window.location.href='/start'|" class = "button startButton"> START </button>
+			<button  type="button" onclick = "stop1(); stop2();" class = "button stopButton"> STOP </button>
+		</div>
+		
+        <table>
+            <tr>
+                <th>Project</th>
+                <th>Start</th>
+                <th>Stop</th>
+                <th>Duration</th>
+            </tr>
+            
+            <tr th:each = "aProject : ${projects}">
+				<td th:text = "${aProject.name}" />
+				<td th:text = "${aProject.startTime}" />
+				<td th:text = "${aProject.endTime}" />
+				<td th:text = "${aProject.duration}" />
+			</tr>
+            
+        </table>
+        
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+</body>
+
+<script src = "../JS/script.js"></script>
+
+</html>
