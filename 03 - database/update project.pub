@@ -1,0 +1,11 @@
+ALTER TABLE timely.project
+ADD isDone BIT;
+
+UPDATE timely.project
+SET isDone = 1
+WHERE id > 0;
+
+// Renaming column
+
+ALTER TABLE timely.project
+RENAME COLUMN isDone TO is_done;

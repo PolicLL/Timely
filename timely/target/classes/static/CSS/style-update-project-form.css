@@ -1,0 +1,181 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header
+{
+    display: flex;
+    width: 100vw;
+    background-color: #536a8f;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+main
+{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+}
+
+
+
+#buttons
+{
+	padding: 50px;
+}
+.button
+{
+    width: 250px;
+    height: 80px;
+    font-size: 2rem;
+    border-radius: 45px;
+    background-color: #536a8f;
+    color: white;
+
+}
+
+.button-2
+{
+    width: 150px;
+    height: 80px;
+    font-size: 0.8rem;
+    border-radius: 10px;
+    background-color: #536a8f;
+    color: white;
+
+}
+
+.button:hover
+{
+    color : #536a8f;
+    background-color: white;
+}
+
+table
+{
+    width: 1000px;
+    margin: 20px;
+    height: 400px;
+    max-height: 400px;
+    border: black 1px solid;
+    border-collapse: collapse;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+
+}
+
+table tr th , table tr td
+{
+    padding: 16px;
+    border: 1px black solid;
+    text-align: center;
+}
+
+
+table tr td
+{
+    border-bottom: black 1px solid;
+    width: 250px;
+}
+
+table tr th
+{
+    background-color: #536a8f;
+    color: white;
+    width: 250px;
+
+}
+
+/*Stop .html part*/
+
+#time
+{
+    margin: 20px;
+    padding: 20px;
+    background-color: #536a8f;
+    color: white;
+    border-radius: 45px;
+    width: 200px;
+}
+
+thead, tbody { display: block; }
+
+tbody {
+    height: 400px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+.project-form{
+    width: 350px;
+
+
+    margin: 20px;
+    padding: 20px;
+}
+
+.button-container{
+    display: flex;              /* establish flex container */
+    flex-direction: row;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center;        /* center items horizontally, in this case */
+
+}
+
+.startButton{
+    margin-right: 20px;
+}
+.stopButton{
+    margin-left: 20px;
+}
+
+.project-update-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    width: 400px;
+    padding: 20px;
+
+    border: black 1px solid;
+
+}
+
+.form-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#updateButton{
+    margin-right: 10px;
+}
+#resetButton{
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+

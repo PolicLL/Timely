@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+
+    <title>Project update</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Bootstrap CSS and Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel = "stylesheet" href = "../CSS/style-update-project-form.css"/>
+
+</head>
+
+<body>
+
+    <header>
+        <h2>Timely</h2>
+    </header>
+
+    <!--
+
+    <form th:action = "@{/save/updated}" th:object = "${updatedProject}" method = "POST" class = "project-form">
+
+        <input type = "hidden" th:field = "${updatedProject.id}">
+
+        <p>Name :  <input type="text" th:field="*{name}" /></p>
+
+        <p>Start Time <input type="datetime-local" th:field="*{startTime}" /></p>
+        <p>End Time <input type="datetime-local" th:field="*{endTime}" /></p>
+
+        <p><input type="submit" value="Submit" />
+            <input type="reset" value="Reset" /></p>
+
+    </form>
+
+    -->
+
+    <main>
+
+        <div class = "project-update-container">
+
+            <h2>Project Update Form</h2>
+
+            <form th:action = "@{/save/updated}" th:object = "${updatedProject}" method = "POST" class = "project-form">
+
+                <input type = "hidden" th:field = "${updatedProject.id}">
+
+                <div class="form-group">
+                    <label for="nameInput">Name</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter name" th:field = "*{name}">
+                </div>
+
+                <div class="form-group">
+                    <label for="startTimeInput">Start Time</label>
+                    <input type="datetime-local" class="form-control" id="startTimeInput" placeholder="Enter start time" th:field = "*{startTime}">
+                </div>
+
+                <div class="form-group">
+                    <label for="endTimeInput">End Time</label>
+                    <input type="datetime-local" class="form-control" id="endTimeInput" placeholder="Enter end time" th:field = "*{endTime}">
+                </div>
+
+                <div class = "form-button-container">
+                    <button type="submit" class="btn btn-primary" id = "updateButton">Update</button>
+                    <button type="reset" class="btn btn-outline-info" id = "resetButton">Reset</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+
+
+</body>
+
+</html>
